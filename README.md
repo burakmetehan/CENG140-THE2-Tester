@@ -39,7 +39,7 @@ Tester can be used to check outputs of your code and the pre-generated results.
 1. Extract cases.zip and results.zip in same directory.
 	Prefer to use "Extract Here" option.
 2. Copy your functions.c file to Tester directory.
-	"function.c" needs to be in same directory with "tester".
+	"functions.c" needs to be in same directory with "tester".
 3. Open your terminal.
 4. Make sure that you are on right directory.
 5. Run "tester".
