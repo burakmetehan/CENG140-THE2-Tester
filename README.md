@@ -23,6 +23,7 @@ Generator can be used to generate test cases randomly. It will create both test 
 Generator will generate test cases.  
 
 **Remark:**
+If there is not "cases" or "results" directory. Before running Generator, create them.  
 If you enter large number mistakenly, it will not control what number is and start creating cases. So, be careful with test case numbers.  
 Also, if you enter large number, it can take a long time.
 
