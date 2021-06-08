@@ -2,6 +2,9 @@
 
 Tester and Generator for the CENG 140 Section-1/2 Take Home Exam 2 in 2020-21 Spring Semester.
 
+**Contributor**
+- Reyhan Kalkan 
+  
 **Remarks:** 
 - Generator and Tester are tested on Ubuntu. 
 - Other linux distributions are not tested. Generator and Tester may work with other distributions.

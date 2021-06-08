@@ -1,25 +1,44 @@
+"""
+	Burak Metehan Tunçel
+	08.06.2021
+	Tester for CENG 140: Take Home Exam 2 (2020-2021)
+	Tester Version: 1.0.2
+		Error in results is fixed.
+"""
 import os
 from time import time
 
 
-print("Preparing for Testing.")
+def print_result(cases, pass_case, tot_time, tot_code_time, aver_code_time):
+	print(f"""
+	Correct result percentage rate: %{format(pass_case/cases*100, ".2f")}
 
+	Tester's Total Execution Time: {tot_time}
+
+	Your Code's Total Execution Time: {tot_code_time}
+
+	Your Code's Average Execution Time: {aver_code_time}
+	""")
+
+
+print("Preparing for Testing.")
 
 os.system("gcc -c functions.c -o functions.o")
 os.system("gcc ./object_files/creator.o ./object_files/print.o functions.o -o creator")
-os.system("mkdir outputs")
+
+if os.path.exists("./outputs"):
+	os.system("rm -rf ./outputs")
+	os.system("mkdir outputs")
+else:
+	os.system("mkdir outputs")
 
 
-def print_result(cases, pass_case, tot_time, tot_code_time, aver_code_time):
-	print("Correct result percentage rate: %{}".format(format(pass_case/cases*100, ".2f")))
-	print(f"Tester's Total Execution Time: {tot_time}")
-	print(f"Your Code's Total Execution Time: {tot_code_time}")
-	print(f"Your Code's Average Execution Time: {aver_code_time}")
-
-
-with open(f"./cases/test_case_number", "r") as case_number:
-	number = case_number.read().splitlines()
-	test_case_number = int(number[1])
+try:
+	with open(f"./cases/test_case_number", "r") as case_number:
+		number = case_number.read().splitlines()
+		test_case_number = int(number[1])
+except:
+	print("Directory cases is not found.")
 
 passed_cases = test_case_number
 error_list = []
@@ -78,8 +97,10 @@ if not error_list:
 	print("Congratulations! There is no error in your outputs.")
 	print_result(test_case_number, passed_cases, total_time, total_time_code_exec, average_code_exec)
 else:
-	print("There is/are error(s).")
-	print_result(test_case_number, passed_cases, total_time, total_time_code_exec, average_code_exec)
-	print("You can see which case is not correct in error.txt")
 	with open("errors.txt", "w") as errors:
 		errors.write("\n".join(error_list))
+
+	print("There is/are error(s).")
+	print("You can see which case is not correct in errors.txt")
+	print_result(test_case_number, passed_cases, total_time, total_time_code_exec, average_code_exec)
+	
