@@ -1,34 +1,15 @@
 # CENG140 Section-1/2 THE2 Tester
 
-Tester and Generator for the CENG 140 Section-1/2 Take Home Exam 2 in 2020-21 Spring Semester.
+Tester for the CENG 140 Section-1/2 Take Home Exam 2 in 2020-21 Spring Semester.
 
 **Contributor**
 - Reyhan Kalkan 
   
 **Remarks:** 
-- Generator and Tester are tested on Ubuntu. 
-- Other linux distributions are not tested. Generator and Tester may work with other distributions.
+- Tester is tested on Ubuntu. 
+- Other linux distributions are not tested. Tester may work with other distributions.
 - It will probably not work on Windows.
 
-## Generator
-
-Generator can be used to generate test cases randomly. It will create both test cases and their results. The number of test cases is not fixed. You will be asked to enter for case number.
-
-### Prerequirements for Generator
-- None
-
-### Usage
-1. Open your terminal.
-2. Make sure that you are on right directory.
-3. Run "test_case_generator".
-4. Enter test case number. It needs to be an integer.
-
-Generator will generate test cases.  
-
-**Remark:**
-If there is not "cases" or "results" directory. Before running Generator, create them.  
-If you enter large number mistakenly, it will not control what number is and start creating cases. So, be careful with test case numbers.  
-Also, if you enter large number, it can take a long time.
 
 ## Tester
 
