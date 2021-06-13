@@ -44,3 +44,6 @@ There is not any indicator that shows you which lines belong to which functions.
 - After, there is a block of float numbers. These are result of the function 8.
 - After, there is a line of integer numbers. This is result of the function 9.
 - After, there is a line of integer numbers. This is result of the function 10.
+
+## Disclaimer
+The tester does not have to be error free. There is no guarantee of the accuracy of the inputs or results.
